@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Artic Psn</title>
+
+    <link rel="stylesheet" href="style.css"> <!-- Usa el estilo oscuro -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        /* Animaciones adicionales */
+        h1, p {
+            text-align: center;
+            animation: fadeInDown 1s ease-out;
+        }
+
+
+        .platform-img {
+            
+            align-items: center;
+            border-radius: 12px;
+            transition: transform 0.5s ease;
+        }
+
+        .platform-img:hover {
+            transform: rotate(-2deg) scale(1.03);
+            
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.7); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Partículas animadas -->
+    <div id="particles-js"></div>
+
+    <header>
+        <h1>Bienvenido a Artic Psn</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <div class="dropdown-content">
+                        <a href="juegos-ps.html">Juegos PS4 y PS5</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header> 
+
+    <main>
+        <h1>El mejor lugar para comprar tus juegos digitales</h1>
+        <p>En Artic Psn, nos dedicamos a ofrecerte los mejores juegos digitales para tus consolas favoritas. Ya sea que prefieras PS4, Xbox o Nintendo, encontrarás una amplia selección de títulos para disfrutar. Además, te brindamos la comodidad de recargas y formas de pago seguras para que puedas adquirir tus juegos sin complicaciones.</p>
+
+        <section class="platform-selection">
+            <h4>Elige tu plataforma de consola</h4>
+            <div class="platforms">
+                <div class="platform" onclick="window.location.href='juegos-ps.html'">
+                    <img src="images-marzo/DRAGON BALL Z KAKAROT.jpeg" alt="Juegos PS" class="platform-img" width="300">
+                    <p>Ver juegos PS4 y PS5</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-text">Artic Psn ©</p>
+    </footer>
+
+    <!-- Librerías JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 }},
+                "color": { "value": ["#00ff9f", "#c50087", "#0ff"] },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5 },
+                "size": { "value": 3 },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#00ff9f",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": { "enable": true, "speed": 2 }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+
+    <!-- Audio gamer de fondo (opcional, descomentarlo si lo deseas) -->
+    <!--
+    <audio autoplay loop>
+        <source src="assets/fondo-gamer.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+    -->
+</body>
+</html>

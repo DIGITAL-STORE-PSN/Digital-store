@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Expires" content="0" />
+  <meta http-equiv="Last-Modified" content="0" />
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <title>DIGITAL STORE PSN</title>
+
+  <!-- Fuente Gamer -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap y CSS principal -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    h1, h4, .footer-text {
+      font-family: 'Press Start 2P', cursive;
+      color: #c50087;
+      text-align: center;
+      font-size: 16px;
+      margin: 20px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 12px;
+    }
+
+    nav a {
+      color: #c50087;
+      text-decoration: none;
+    }
+
+    .carousel-inner img {
+      transition: transform 0.5s ease;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .carousel-item:hover img {
+      transform: scale(1.03);
+    }
+
+    .oferta-item {
+      animation: zoomIn 1s ease-in;
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .btn-destacado {
+      background: linear-gradient(to right, #00ff9f, #c50087);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    .btn-destacado:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #c50087;
+    }
+
+    .footer-text {
+      margin-top: 40px;
+    }
+
+    .social-icons img {
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    .ofertas-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .oferta-item img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #c50087;
+      border-radius: 10px;
+    }
+
+    .descuento-overlay {
+      text-align: center;
+      margin-top: 10px;
+      color: #000000;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 12px;
+    }
+
+    @media screen and (max-width: 768px) {
+      h1, h4 {
+        font-size: 12px;
+      }
+
+      .btn-destacado {
+        font-size: 10px;
+        padding: 8px 12px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>DIGITAL STORE PSN</h1>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="ofertas-ps.html">Promociones De Locura PS</a></li>
+        <li><a href="juegos-ps.html">Catalogo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container mt-4">
+    <h1>El mejor lugar para comprar tus juegos digitales</h1>
+    <h4>Nuestros Mejores Juegos en Promoción</h4>
+
+    <!-- Carrusel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active text-center">
+          <img src="images-mayo/Call of Duty® Infinite Warfare.avif" alt="DayZ" />
+        </div>
+        <div class="carousel-item text-center">
+          <img src="images-mayo/UNCHARTED™ The Nathan Drake Collection.avif" alt="God of War III" />
+        </div>
+        <div class="carousel-item text-center">
+          <img src="images-mayo/God of War.webp" alt="EA Sports FC" />
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+    </div>
+
+    <!-- Ofertas -->
+    <section class="ofertas mt-4">
+      <h1>No te pierdas nuestras ofertas</h1>
+      <div class="ofertas-container">
+        <div class="oferta-item">
+          <img src="images-mayo/Battlefield™ V.avif" alt="GTA Trilogy" onclick="window.location.href='juegos.html'" />
+          <div class="descuento-overlay">60% de descuento</div>
+        </div>
+        <div class="oferta-item">
+          <img src="images-mayo/Crash Bandicoot™ 4 It’s About Time.jpeg" alt="Hitman" onclick="window.location.href='juegos.html'" />
+          <div class="descuento-overlay">50% de descuento</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+     <footer>
+        <div class="social-icons">
+            <a href="https://wa.me/3195978888" class="whatsapp" target="_blank">
+                <img src="img/WhatsApp neon logo.jpeg" alt="WhatsApp" width="40" border-radius="20px">
+            </a>
+            <a href="https://www.instagram.com/digital.store.psn/?hl=es/" class="instagram" target="_blank">
+                <img src="img/6fb329e7-6382-41bd-bc3d-faef1e7fe07c.jpeg" alt="Instagram" width="40" border-radius="20px">
+            </a>
+            <a href="https://www.tiktok.com/@digitalstorecali71" class="TikTok">
+                <img src="img/TikTok overtakes Facebook downloads, Facebook fires back with Lasso - Schaefer Marketing Solutions_ We Help Businesses {grow}.jpeg" alt="TikTok" width="40" border-radius="20px">
+            </a>
+        </div>
+    </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

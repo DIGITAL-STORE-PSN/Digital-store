@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --color-azul: #3a3f5a;      /* Azul oscuro */
+    --color-verde: #1e402f;     /* Verde oscuro */
+    --color-fucsia: #6c3483;    /* Fucsia oscuro */
+    --texto: #e0e0e0;           /* Gris claro para texto */
+    --overlay-bg: rgba(20, 20, 30, 0.85);
+    --degradado: linear-gradient(135deg, #181c24 60%, #232b36 100%);
+    --interactivo: #222b3a;     /* Fondo interactivo */
+    --hover: #444c5c;           /* Hover oscuro */
+    --borde: #232b36;
+}
+
+/* Fondo y texto general */
+body {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    background: var(--degradado);
+    color: var(--texto);
+    min-height: 100vh;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+/* Header y navegación */
+header {
+    background: var(--degradado);
+    padding: 20px;
+    box-shadow: 0 0 20px var(--color-fucsia);
+}
+
+header h1 {
+    font-size: 40px;
+    color: var(--texto);
+    text-shadow: 0 0 10px var(--color-fucsia), 0 0 20px var(--color-azul);
+    letter-spacing: 2px;
+    animation: header-glow 2s infinite alternate;
+}
+
+@keyframes header-glow {
+    0% { text-shadow: 0 0 10px var(--color-fucsia), 0 0 20px var(--color-azul);}
+    100% { text-shadow: 0 0 20px var(--color-azul), 0 0 40px var(--color-fucsia);}
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: var(--interactivo);
+    border-radius: 10px;
+    margin: 0 auto 20px auto;
+    max-width: 90vw;
+}
+
+nav ul li a {
+    color: var(--texto);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-shadow: 0 0 5px var(--color-azul);
+    transition: background 0.3s, color 0.3s, text-shadow 0.3s;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background: var(--hover);
+    color: var(--color-fucsia);
+    text-shadow: 0 0 15px var(--color-fucsia);
+    transform: scale(1.08);
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-fucsia);
+    text-shadow: 0 0 5px var(--color-azul), 0 0 10px var(--color-verde), 0 0 15px var(--color-fucsia);
+    margin-bottom: 20px;
+    animation: titulo-anim 3s infinite alternate;
+}
+
+@keyframes titulo-anim {
+    0% { letter-spacing: 2px; }
+    100% { letter-spacing: 6px; }
+}
+
+/* Enlaces */
+a {
+    text-decoration: none;
+    color: var(--color-verde);
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+    color: var(--color-fucsia);
+    text-shadow: 0 0 10px var(--color-fucsia);
+}
+
+/* Botones */
+button {
+    font-family: 'Press Start 2P', cursive;
+    background: var(--interactivo);
+    color: var(--texto);
+    border: 2px solid var(--color-fucsia);
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s;
+    box-shadow: 0 0 15px var(--color-azul);
+    margin-top: 10px;
+}
+
+button:hover {
+    background: var(--color-fucsia);
+    color: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 0 25px var(--color-fucsia);
+}
+
+/* Ofertas y tarjetas */
+.ofertas-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.oferta-item {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--color-azul);
+    background: var(--interactivo);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.oferta-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.oferta-item:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 30px var(--color-fucsia);
+}
+
+.descuento-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--overlay-bg);
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Press Start 2P', cursive;
+    animation: pulse 1.2s infinite alternate;
+    box-shadow: 0 0 10px var(--color-fucsia);
+    letter-spacing: 1px;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; transform: translate(-50%, -50%) scale(1);}
+    100% { opacity: 1; transform: translate(-50%, -50%) scale(1.08);}
+}
+
+/* Footer */
+footer {
+    background: var(--interactivo);
+    padding: 20px;
+    color: var(--texto);
+    border-top: 3px solid var(--color-fucsia);
+    box-shadow: 0 -5px 20px var(--color-azul);
+    text-align: center;
+    animation: footer-anim 2s;
+}
+
+@keyframes footer-anim {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.footer-text {
+    font-size: 22px;
+    text-shadow: 0 0 10px var(--color-verde);
+    color: var(--color-fucsia);
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.social-icons img {
+    margin: 0 10px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 0 15px var(--color-fucsia);
+}
+
+/* Partículas fondo */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+    }
+    .carousel-inner img {
+        width: 100%;
+        height: auto;
+    }
+    .ofertas-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .oferta-item {
+        width: 95vw;
+        height: 180px;
+    }
+    .footer-text {
+        font-size: 16px;
+    }
+}
